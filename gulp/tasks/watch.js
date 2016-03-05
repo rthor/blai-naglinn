@@ -4,8 +4,8 @@ import config from '../config';
 
 gulp.task('watch', ['build'], function() {
   watch([
-    `${config.source}/styles/**/*.less`,
-    `${config.source}/components/**/*.less`
+    `${config.source}/styles/**/*.scss`,
+    `${config.source}/components/**/*.scss`
   ], function() {
     gulp.start('styles');
   });

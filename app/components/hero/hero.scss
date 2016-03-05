@@ -1,0 +1,12 @@
+.Hero {
+  background: transparent no-repeat center center / cover;
+  height: 150px;
+
+  @include minWidth(small) {
+    height: 300px;
+  }
+
+  @include minWidth(medium) {
+    height: 400px;
+  }
+}

@@ -1,0 +1,11 @@
+.Slug {
+  border-bottom: 1px solid currentColor;
+  color: map_get(map_get($colors, base), normal);
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4em;
+  padding: 2rem 0 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}

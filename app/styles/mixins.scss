@@ -1,0 +1,25 @@
+@import "./vars";
+
+@mixin minWidth($size) {
+  @if map-has-key($sizes, $size) {
+    @media (min-width: map_get($sizes, $size)) {
+      @content;
+    }
+  } @else {
+    @error "The size #{$size} is undefined.";
+  }
+}
+
+@mixin debug() {
+  outline: 1px solid red;
+}
+
+@mixin allStates {
+  &,
+  &:focus,
+  &:hover,
+  &:active,
+  &:visited {
+    @content;
+  }
+}

@@ -1,0 +1,42 @@
+@import "normalize.css/normalize.css";
+@import "globals";
+@import "mixins";
+@import "vars";
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: map_get(map_get($colors, text), normal);
+  font-family: map_get(map_get($font, base), family);
+  font-size: map_get(map_get($font, base), size);
+  line-height: map_get(map_get($font, base), lineHeight);
+
+  @include minWidth(medium) {
+    font-size: 18px;
+  }
+}
+
+a {
+  @include allStates {
+    color: map_get(map_get($colors, base), normal);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@import "header/header";
+@import "container/container";
+@import "copy/copy";
+@import "hero/hero";
+@import "page/page";
+@import "slug/slug";

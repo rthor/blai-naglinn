@@ -1,0 +1,24 @@
+$sizes: (
+  small: 768px,
+  medium: 1024px,
+  large: 1200px
+);
+
+$colors: (
+  text: (
+    normal: #666,
+    light: #999
+  ),
+  base: (
+    normal: #007dc3,
+    dark: #1176c1
+  )
+);
+
+$font: (
+  base: (
+    family: ('Bitter', serif),
+    size: 1rem,
+    lineHeight: 1.5rem,
+  )
+);
