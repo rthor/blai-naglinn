@@ -15,7 +15,7 @@
     "url": "https://github.com/rthor/blainaglinn-is/issues"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/gulp server"
+    "dev": "gulp server"
   },
   "private": true,
   "homepage": "https://github.com/rthor/blainaglinn-is",
