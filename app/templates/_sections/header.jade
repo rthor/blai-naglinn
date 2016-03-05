@@ -1,0 +1,9 @@
+block vars
+  - var activePage = '/'
+header.Header: .Container
+  h1.Header-logo: a.Header-logoLink(href='/')=title
+  nav.Header-nav
+    a.Header-navLink(href='/', class=(activePage === '/' ? 'is-active' : '')) Forsíða
+    a.Header-navLink(href='/starfsemi', class=(activePage === '/starfsemi' ? 'is-active' : '')) Starfsemi
+    a.Header-navLink(href='/felagsmenn', class=(activePage === '/felagsmenn' ? 'is-active' : '')) Félagsmenn
+    a.Header-navLink(href='https://krabbameinsleit.is') Krabbameinsleit.is

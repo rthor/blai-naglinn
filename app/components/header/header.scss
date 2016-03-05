@@ -1,0 +1,37 @@
+.Header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  padding: 2rem 0;
+
+  &-logoLink {
+    @extend %replace-text;
+    background: transparent url(/images/logo.png) no-repeat left top / contain;
+    height: 100px;
+    float: left;
+    width: 177px;
+  }
+
+  &-nav {
+    float: right;
+    margin-top: 3.5rem;
+  }
+
+  &-navLink {
+    @extend %type-sans;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    text-decoration: none;
+
+    @include allStates {
+      color: map_get(map_get($colors, text), light);
+    }
+  }
+  
+  &-navLink.is-active {
+    @include allStates {
+      color: map_get(map_get($colors, base), normal);
+    }
+  }
+}

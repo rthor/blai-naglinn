@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    title=title
+
+    meta(name="description" content=description)
+    meta(name="theme-color" content="#007dc3")
+
+    link(rel='icon' type='image/png' href='favicon.png')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Bitter:400,700,400italic')
+    link(rel='stylesheet' href='/styles/main.css')
+
+    meta(property='og:title' content=title)
+    meta(property='og:site_name' content=title)
+    meta(property='og:url' content=url)
+    meta(property='og:description' content=description)
+    meta(property='og:type' content='website')
+    meta(property='og:image' content=(url + '/images/og.png'))
+
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content="@jsconfis")
+    meta(name="twitter:title" content=title)
+    meta(name="twitter:description" content=description)
+    meta(name="twitter:image" content=(url + '/images/og.png'))
+  body
+    include ../_sections/header
+
+    main(role='main')
+      block content
+
+    script(src="scripts/app.js")

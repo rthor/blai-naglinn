@@ -1,0 +1,32 @@
+.Container {
+  padding: 0 1rem;
+
+  @include minWidth(small) {
+    margin: 0 auto;
+    max-width: map_get($sizes, small);
+  }
+
+  @include minWidth(medium) {
+    max-width: map_get($sizes, medium);
+  }
+
+  @include minWidth(large) {
+    max-width: map_get($sizes, large);
+  }
+}
+
+.Container--narrow {
+  @extend .Container;
+
+  @include minWidth(small) {
+    max-width: map_get($sizes, small) - 100px;
+  }
+
+  @include minWidth(medium) {
+    max-width: map_get($sizes, medium) - 200px;
+  }
+
+  @include minWidth(large) {
+    max-width: map_get($sizes, medium);
+  }
+}

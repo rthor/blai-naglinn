@@ -1,0 +1,16 @@
+.Page {
+  margin-top: 4rem;
+
+  &-title {
+    @extend %type-sans;
+    color: map_get(map_get($colors, base), normal);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.4em;
+    margin-bottom: 2rem;
+
+    @include minWidth(small) {
+      font-size: 3rem;
+    }
+  }
+}

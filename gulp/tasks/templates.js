@@ -4,9 +4,14 @@ import config from '../config';
 import errorHandler from '../utils/error-handler';
 
 gulp.task('templates', () => {
-  return gulp.src(`${config.source}/templates/*.jade`)
+  return gulp.src([`${config.source}/templates/**/*.jade`, `!${config.source}/templates/_**/*.jade`])
     .pipe(jade({
-      pretty: config.debug
+      pretty: config.debug,
+      locals: {
+        title: 'Blái naglinn',
+        description: 'Baráttan gegn krabbameini',
+        url: 'http://blainaglinn.is',
+      }
     }))
     .on('error', errorHandler)
     .pipe(gulp.dest(config.target));
